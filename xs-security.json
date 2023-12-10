@@ -1,6 +1,33 @@
 {
-  "scopes": [],
+  "xsappname": "myhanaapp",
+  "tenant-mode": "dedicated", 
+  "scopes": [
+    {
+      "name": "$XSAPPNAME.TC_Capabilities",
+      "description": "TC_Capabilities"
+    }
+  ],
   "attributes": [],
-  "role-templates": [],
-  "authorities-inheritance": false
+  "role-templates": [
+    {
+      "name": "TC_Capabilities",
+      "description": "generated",
+      "scope-references": [
+        "$XSAPPNAME.TC_Capabilities"
+      ],
+      "attribute-references": []
+    }
+  ],
+  "oauth2-configuration": {
+    "credential-types": [
+        "binding-secret",
+        "x509"
+    ],
+    "redirect-uris": [
+        "https://*.applicationstudio.cloud.sap/**",
+        "https://b31ace8atrial-dev-myhanaapp.cfapps.us10-001.hana.ondemand.com/**",
+        "https://*.hana.ondemand.com/**"
+
+    ]
+}
 }

@@ -38,8 +38,10 @@ modules:
     path: app/
     parameters:
       keep-existing-routes: true
-      disk-quota: 256M
+      disk-quota: 512M
       memory: 256M
+    build-parameters:
+      ignore: ["default-env.json", ".env"]
     requires:
       - name: srv-api
         group: destinations
