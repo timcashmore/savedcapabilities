@@ -1,0 +1,156 @@
+using CapabilityService as service from '../../srv/capabilities_srv';
+
+annotate service.BusinessCapabilities with @(
+    UI.LineItem : [
+        {
+            $Type : 'UI.DataField',
+            Label : 'sapcapabilityid',
+            Value : sapcapabilityid,
+        },
+        {
+            $Type : 'UI.DataField',
+            Label : 'sapbusinessareaid',
+            Value : sapbusinessareaid,
+        },
+        {
+            $Type : 'UI.DataField',
+            Label : 'customer',
+            Value : customer,
+        },
+        {
+            $Type : 'UI.DataField',
+            Label : 'sapcapability',
+            Value : sapcapability,
+        },
+        {
+            $Type : 'UI.DataField',
+            Label : 'saplob',
+            Value : saplob,
+        },
+    ]
+);
+annotate service.BusinessCapabilities with @(
+    UI.FieldGroup #GeneratedGroup1 : {
+        $Type : 'UI.FieldGroupType',
+        Data : [
+            {
+                $Type : 'UI.DataField',
+                Label : 'customer',
+                Value : customer,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'sapbusinessareaid',
+                Value : sapbusinessareaid,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'sapcapabilityid',
+                Value : sapcapabilityid,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'sapcapability',
+                Value : sapcapability,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'saplob',
+                Value : saplob,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'sapbusinessarea',
+                Value : sapbusinessarea,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'businessarea',
+                Value : businessarea,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'capabilityid',
+                Value : capabilityid,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'capability',
+                Value : capability,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'inscope',
+                Value : inscope,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 's4core',
+                Value : s4core,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'sapsku',
+                Value : sapsku,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'sapproductname',
+                Value : sapproductname,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'deployment',
+                Value : deployment,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'sapcapabilitydetails',
+                Value : sapcapabilitydetails,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'saprecommended',
+                Value : saprecommended,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'sapproductdetails',
+                Value : sapproductdetails,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'sapproductmetric',
+                Value : sapproductmetric,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'sapproductmetricdetails',
+                Value : sapproductmetricdetails,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'urlname',
+                Value : urlname,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'urllink',
+                Value : urllink,
+            },
+            {
+                $Type : 'UI.DataField',
+                Label : 'notes',
+                Value : notes,
+            },
+        ],
+    },
+    UI.Facets : [
+        {
+            $Type : 'UI.ReferenceFacet',
+            ID : 'GeneratedFacet1',
+            Label : 'General Information',
+            Target : '@UI.FieldGroup#GeneratedGroup1',
+        },
+    ]
+);

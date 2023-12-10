@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="CapabilityService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="BusinessCapabilities" EntityType="CapabilityService.BusinessCapabilities"/>
+                <EntitySet Name="BusinessAreas" EntityType="CapabilityService.BusinessAreas"/>
+                <EntitySet Name="Scope" EntityType="CapabilityService.Scope"/>
+            </EntityContainer>
+            <EntityType Name="BusinessCapabilities">
+                <Key>
+                    <PropertyRef Name="customer"/>
+                    <PropertyRef Name="sapbusinessareaid"/>
+                    <PropertyRef Name="sapcapabilityid"/>
+                </Key>
+                <Property Name="customer" Type="Edm.String" Nullable="false"/>
+                <Property Name="sapbusinessareaid" Type="Edm.String" Nullable="false"/>
+                <Property Name="sapcapabilityid" Type="Edm.String" Nullable="false"/>
+                <Property Name="sapcapability" Type="Edm.String"/>
+                <Property Name="saplob" Type="Edm.String"/>
+                <Property Name="sapbusinessarea" Type="Edm.String"/>
+                <Property Name="businessarea" Type="Edm.String"/>
+                <Property Name="capabilityid" Type="Edm.String"/>
+                <Property Name="capability" Type="Edm.String"/>
+                <Property Name="inscope" Type="Edm.String"/>
+                <Property Name="s4core" Type="Edm.String"/>
+                <Property Name="sapsku" Type="Edm.String"/>
+                <Property Name="sapproductname" Type="Edm.String"/>
+                <Property Name="deployment" Type="Edm.String"/>
+                <Property Name="sapcapabilitydetails" Type="Edm.String"/>
+                <Property Name="saprecommended" Type="Edm.String"/>
+                <Property Name="sapproductdetails" Type="Edm.String"/>
+                <Property Name="sapproductmetric" Type="Edm.String"/>
+                <Property Name="sapproductmetricdetails" Type="Edm.String"/>
+                <Property Name="urlname" Type="Edm.String"/>
+                <Property Name="urllink" Type="Edm.String"/>
+                <Property Name="notes" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="BusinessAreas">
+                <Key>
+                    <PropertyRef Name="businessarea"/>
+                </Key>
+                <Property Name="businessarea" Type="Edm.String" MaxLength="100" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="Scope">
+                <Key>
+                    <PropertyRef Name="scope"/>
+                </Key>
+                <Property Name="scope" Type="Edm.String" MaxLength="1" Nullable="false"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>
